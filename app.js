@@ -20,7 +20,7 @@ app.listen(process.env.PORT || PORT, console.log("サーバが起動しました
 // データベース接続
 const start = async () => {
     try {
-        await connectDB(process.env.MONGO_URL);
+        await connectDB(process.env.MONGO_HEROKU_URL || process.env.MONGO_URL);
         app.get('/', (req, res) => res.send('<h2>TODO!</h2>'));
     } catch (err) {
         console.log(err);
