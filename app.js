@@ -15,7 +15,7 @@ require("dotenv").config();
 app.use("/api/v1/tasks", taskRoute);
 
 const PORT = 5000;
-app.listen(proccess.env.PORT || PORT, console.log("サーバが起動しました"));
+app.listen(process.env.PORT || PORT, console.log("サーバが起動しました"));
 
 // データベース接続
 const start = async () => {
